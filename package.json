@@ -4,11 +4,11 @@
   "description": "",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "npm run clear && parcel build index.html",
     "lint": "eslint src/**/*.js",
     "format": "prettier --write src/**/*.js",
     "format:lint": "npm run format && npm run lint",
-    "clear": "rimraf dist .parsal-cache"
+    "clear": "rimraf dist .parcel-cache"
   },
   "license": "MIT",
   "dependencies": {
@@ -17,38 +17,31 @@
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
-    "babel-eslint": "^10.1.0",
     "babel-preset-nano-react-app": "^0.1.0",
     "eslint": "^7.24.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
     "parcel": "^2.0.0-alpha.3.2",
-    "parcel-bundler": "^1.12.5",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2"
+    "parcel-bundler": "^1.12.5"
   },
-  "babel": {
-    "presets": [
-      "nano-react-app"
+  "babel":{
+    "presets":[
+    "nano-react-app"
     ],
-    "plugins": [
-      [
-        "@babel/plugin-proposal-class-properties",
-        {
-          "loose": true
-        },
-        "yt1"
-      ],
-      [
-        "@babel/plugin-proposal-private-methods",
-        {
-          "loose": true
-        },
-        "yt2"
-      ]
+    "plugins":[
+    [
+    "@babel/plugin-proposal-class-properties",
+    {
+    "loose":true
+    },
+    "yt1"
+    ],
+    [
+    "@babel/plugin-proposal-private-methods",
+    {
+    "loose":true
+    },
+    "yt2"
     ]
+    ]
+    }
   }
-}
+
